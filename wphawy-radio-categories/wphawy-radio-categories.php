@@ -31,7 +31,7 @@ class WphawyRadioCats {
 	------------------------------------------------------------ */
 	 function wphawy_add_meta_box() {
 	 
-		 add_meta_box( 'wphawycatsdiv',' التصنيفات' , array( $this, 'wphawy_categories_metabox' ), 'post' , 'side', 'core' ); 
+		 add_meta_box( 'wphawycatsdiv', __( 'Categories' ) , array( $this, 'wphawy_categories_metabox' ), 'post' , 'side', 'core' ); 
 		 
 	 }
 	 
