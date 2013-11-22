@@ -67,10 +67,10 @@ class WphawyRadioCats {
 			<!-- Display taxonomy terms -->
 			<div id="<?php echo $taxonomy; ?>-all" class="tabs-panel">
 				<ul id="<?php echo $taxonomy; ?>checklist" class="list:<?php echo $taxonomy?> categorychecklist form-no-clear">
-					<?php   foreach($terms as $term){
-						$id = $taxonomy.'-'.$term->term_id;
+					<?php   foreach ( $terms as $term ) {
+						$id = $taxonomy . '-' . $term->term_id;
 						echo "<li id='$id'><label class='selectit'>";
-						echo "<input type='radio' id='in-$id' name='{$name}'".checked($current,$term->term_id,false)."value='$term->term_id' />$term->name<br />";
+						echo "<input type='radio' id='in-$id' name='{$name}'" . checked( $current,$term->term_id, false ) . "value='$term->term_id' />$term->name<br />";
 					   echo "</label></li>";
 					}?>
 			   </ul>
@@ -79,10 +79,10 @@ class WphawyRadioCats {
 			<!-- Display popular taxonomy terms -->
 			<div id="<?php echo $taxonomy; ?>-pop" class="tabs-panel" style="display: none;">
 				<ul id="<?php echo $taxonomy; ?>checklist-pop" class="categorychecklist form-no-clear" >
-					<?php   foreach($popular as $term){
-						$id = 'popular-'.$taxonomy.'-'.$term->term_id;
+					<?php   foreach( $popular as $term ) {
+						$id = 'popular-' . $taxonomy . '-' . $term->term_id;
 						echo "<li id='$id'><label class='selectit'>";
-						echo "<input type='radio' id='in-$id'".checked($current,$term->term_id,false)."value='$term->term_id' />$term->name<br />";
+						echo "<input type='radio' id='in-$id'" . checked( $current,$term->term_id, false )."value='$term->term_id' />$term->name<br />";
 						echo "</label></li>";
 					}?>
 			   </ul>
