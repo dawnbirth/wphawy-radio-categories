@@ -70,7 +70,7 @@ class WphawyRadioCats {
 					<?php   foreach ( $terms as $term ) {
 						$id = $taxonomy . '-' . $term->term_id;
 						echo "<li id='$id'><label class='selectit'>";
-						echo "<input type='radio' id='in-$id' name='{$name}'" . checked( $current,$term->term_id, false ) . "value='$term->term_id' />$term->name<br />";
+						echo "<input type='radio' id='in-$id' name='{$name}'" . checked( $current, $term->term_id, false ) . "value='$term->term_id' />$term->name<br />";
 					   echo "</label></li>";
 					}?>
 			   </ul>
@@ -82,7 +82,7 @@ class WphawyRadioCats {
 					<?php   foreach( $popular as $term ) {
 						$id = 'popular-' . $taxonomy . '-' . $term->term_id;
 						echo "<li id='$id'><label class='selectit'>";
-						echo "<input type='radio' id='in-$id'" . checked( $current,$term->term_id, false )."value='$term->term_id' />$term->name<br />";
+						echo "<input type='radio' id='in-$id'" . checked( $current, $term->term_id, false )."value='$term->term_id' />$term->name<br />";
 						echo "</label></li>";
 					}?>
 			   </ul>
