@@ -13,14 +13,14 @@ class WphawyRadioCats {
 
 	function __construct() {
 	
-		add_action( 'admin_menu',     array( $this, 'wphawy_remove_meta_box'  )  );
-		add_action( 'add_meta_boxes', array( $this, 'wphawy_add_meta_box'     )  );
+		add_action( 'admin_menu',     array( $this, 'remove_meta_box'  )  );
+		add_action( 'add_meta_boxes', array( $this, 'add_meta_box'     )  );
 		
 	}
 	
 	/* =Remove the default categories metabox
 	------------------------------------------------------------ */
-	function wphawy_remove_meta_box(){
+	function remove_meta_box(){
 
 	   remove_meta_box( 'categorydiv', 'post', 'side' );
 	   
@@ -29,15 +29,15 @@ class WphawyRadioCats {
 
 	/* =Add our new Radio categories metabox
 	------------------------------------------------------------ */
-	 function wphawy_add_meta_box() {
+	 function add_meta_box() {
 	 
-		 add_meta_box( 'wphawycatsdiv', __( 'Categories' ) , array( $this, 'wphawy_categories_metabox' ), 'post' , 'side', 'core' ); 
+		 add_meta_box( 'wphawycatsdiv', __( 'Categories' ) , array( $this, 'categories_metabox' ), 'post' , 'side', 'core' ); 
 		 
 	 }
 	 
 	/* =Our function that creates the new radio button categories list
 	-------------------------------------------------------------------- */
-	function wphawy_categories_metabox( $post ) {  
+	function categories_metabox( $post ) {  
 
 		$taxonomy  = 'category';
 		
